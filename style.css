@@ -1,12 +1,10 @@
 html {
     background-color: rgba(22, 22, 22, 0.932);
 }
-
 body {
     margin: 40px;
     background-color: rgba(26, 25, 25, 0.904);
 }
-
 #cabecalhoconteiner {
     display: flex;
     height: 400px;
@@ -17,9 +15,7 @@ body {
     background-size: cover;
     background-position: center;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
-    
 }
-
 #title {
     display: flex;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -32,7 +28,6 @@ body {
     text-shadow: 0 0 0.2em #87F, 0 0 0.2em #87F,
         0 0 0.2em #87F
 }
-
 #color-palette {
     display: flex;
     width: 100%;
@@ -40,26 +35,20 @@ body {
     align-self: flex-end;
     margin-bottom: 30px;
 }
-
-
 .color {
     border: 1px black solid;
     height: 100px;
     width: 110px;
     border-radius: 50%;
 }
-
 #button-conteiner {
     display: flex;
     justify-content: center;
 }
-
 #button-random-color {
  display: flex;
  align-self: center;
 }
-
-
 #pixel-board-conteiner {
 border: 1px black solid;
 display: flex;
@@ -73,7 +62,6 @@ background-size: contain;
 background-position: center;
 box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
 }
-
 #pixel-board {
  display: flex;
  align-self: center;
@@ -90,15 +78,13 @@ box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
     border: black solid 1px;
     background-color: white;
     box-shadow: 0 0 5px 5px rgba(2, 2, 51, 0.808);
-  }
-
+}
 #aumenta-pixel-board {
     border: solid 1px orange;
     width: 20%;
     display: flex;
     align-self: center;
 }
-
 #rodape {
     display: flex;
     width: 100%;

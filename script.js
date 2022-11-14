@@ -77,9 +77,42 @@ button.addEventListener('click', () => {
       pixelBoard.appendChild(pixel);
       pixel.className = 'pixel';
    }
-
- }
+ };
  createPixelsBoxes(25);
+
+ 
+ const requisito9 = () => {
+   const color1 = document.getElementById('color-1');
+   const color2 = document.getElementById('color-2');
+   const color3 = document.getElementById('color-3');
+   const color4 = document.getElementById('color-4');
+ const addRemoveClassName = (evento) => {
+  const elementSelected = document.getElementsByClassName("selected")[0];
+  elementSelected.classList.remove('selected');
+   evento.target.classList.add('selected');
+};
+ 
+ color1.addEventListener('click', addRemoveClassName);
+ color2.addEventListener('click', addRemoveClassName);
+ color3.addEventListener('click', addRemoveClassName);
+ color4.addEventListener('click', addRemoveClassName);
+};
+requisito9();
+
+const requisito10 = () => {
+   const inputColor = (evento) => {
+      const inputSelectedColor = document.getElementsByClassName("selected")[0];
+   let backgroundColor = inputSelectedColor.style.backgroundColor;
+   evento.target.style.backgroundColor = backgroundColor;
+   }
+   let pixel = document.getElementsByClassName('pixel');
+   for (let elements of pixel) {
+      elements.addEventListener('click', inputColor);
+   }
+  
+
+}
+requisito10();
 
 
 
