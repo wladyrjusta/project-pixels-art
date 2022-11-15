@@ -49,6 +49,16 @@ body {
  display: flex;
  align-self: center;
 }
+#button-clear-conteiner {
+    display: flex;
+    justify-content: center;
+}
+#clear-board {
+    display: flex;
+    width: 15%;
+    align-self: center;
+    justify-content: center;
+}
 #pixel-board-conteiner {
 border: 1px black solid;
 display: flex;

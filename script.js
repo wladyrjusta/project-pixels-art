@@ -46,7 +46,7 @@ const generateColor = () => {
 };
 generateColor();
 
-window.onload = () => {
+
 const button = document.getElementById('button-random-color');
 button.addEventListener('click', () => {
    for (let index = 2; index < 5; index += 1) {
@@ -68,7 +68,7 @@ button.addEventListener('click', () => {
    for (let index in savedColors) {
       palettes[index].style.backgroundColor = savedColors[index]
    }
-};
+
 //Requisito 5
  const createPixelsBoxes = (numPixels) => {
    const pixelBoard = document.getElementById('pixel-board');
@@ -76,6 +76,7 @@ button.addEventListener('click', () => {
       let pixel = document.createElement('div');
       pixelBoard.appendChild(pixel);
       pixel.className = 'pixel';
+      pixel.style.backgroundColor = 'white';
    }
  };
  createPixelsBoxes(25);
@@ -99,24 +100,37 @@ button.addEventListener('click', () => {
 };
 requisito9();
 
+
 const requisito10 = () => {
    const inputColor = (evento) => {
-      const inputSelectedColor = document.getElementsByClassName("selected")[0];
+   const inputSelectedColor = document.getElementsByClassName("selected")[0];
    let backgroundColor = inputSelectedColor.style.backgroundColor;
-   evento.target.style.backgroundColor = backgroundColor;
-   }
+     evento.target.style.backgroundColor = backgroundColor;
+   };
    let pixel = document.getElementsByClassName('pixel');
-   for (let elements of pixel) {
-      elements.addEventListener('click', inputColor);
-   }
-  
-
-}
+   for (let index = 0; index < pixel.length; index += 1) {
+      pixel[index].addEventListener('click', inputColor);      
+   };
+};
 requisito10();
 
 
 
 
+const requisito11 = () => {
+   const buttonClearConteiner = document.getElementById('button-clear-conteiner');
+   const clearButton = document.createElement('button');
+   clearButton.innerText = 'Limpar';
+   clearButton.id = 'clear-board';
+   clearButton.className = 'btn btn-secondary';
+   buttonClearConteiner.appendChild(clearButton);
 
+   let pixel = document.getElementsByClassName('pixel');
+   for (let elements of pixel) {
+      clearButton.addEventListener('click', () => {
+         elements.style.backgroundColor = 'white';
+      });
+   }
 
-
+}
+requisito11();
