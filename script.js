@@ -73,7 +73,7 @@ button.addEventListener('click', () => {
  const createPixelsBoxes = (numPixels) => {
    const pixelBoard = document.getElementById('pixel-board');
    for (index = 1; index <= numPixels; index += 1) {
-      let pixel = document.createElement('div');
+      let pixel = document.createElement('li');
       pixelBoard.appendChild(pixel);
       pixel.className = 'pixel';
       pixel.style.backgroundColor = 'white';

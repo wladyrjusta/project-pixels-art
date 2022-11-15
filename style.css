@@ -48,16 +48,36 @@ body {
 #button-random-color {
  display: flex;
  align-self: center;
+ align-items: center;
+ justify-content: center;
+ height: 50px;
+ width: 180px;
+ color: white;
+ background-color: rgb(44, 44, 224);
+ border-radius: 8px;
+ border: #87F;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ font-weight: bolder;
+ font-size: 19px;
 }
 #button-clear-conteiner {
     display: flex;
     justify-content: center;
 }
 #clear-board {
-    display: flex;
-    width: 15%;
-    align-self: center;
-    justify-content: center;
+ display: flex;
+ align-self: center;
+ align-items: center;
+ justify-content: center;
+ height: 35px;
+ width: 200px;
+ color: white;
+ background-color: gray;
+ border-radius: 8px;
+ border: #87F;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ font-weight: bolder;
+ font-size: 19px;
 }
 #pixel-board-conteiner {
 border: 1px black solid;
