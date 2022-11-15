@@ -109,13 +109,10 @@ const requisito10 = () => {
    };
    let pixel = document.getElementsByClassName('pixel');
    for (let index = 0; index < pixel.length; index += 1) {
-      pixel[index].addEventListener('click', inputColor);      
+      pixel[index].addEventListener('click', inputColor); 
    };
 };
 requisito10();
-
-
-
 
 const requisito11 = () => {
    const buttonClearConteiner = document.getElementById('button-clear-conteiner');
@@ -134,3 +131,28 @@ const requisito11 = () => {
 
 }
 requisito11();
+
+
+const requisito12 = () => {
+   const saveBackgrounds = () => {
+   let savedBackgrounds = [];
+   let pixel = document.getElementsByClassName('pixel');
+   for (let index = 0; index < pixel.length; index += 1) {
+      savedBackgrounds.push(pixel[index].style.backgroundColor); 
+   };
+   localStorage.setItem('pixelBoard', JSON.stringify(savedBackgrounds));
+   };
+   saveBackgrounds();
+   
+   const setLocalBackgrounds = () => {
+      let localBackgrounds = JSON.parse(localStorage.getItem('pixelBoard'));
+      let pixel = document.getElementsByClassName('pixel');
+      for (let index = 0; index < pixel.length; index += 1) {
+         pixel[index].style.backgroundColor = localBackgrounds;
+   };
+   setLocalBackgrounds();
+   };
+   };
+   requisito12();
+
+
